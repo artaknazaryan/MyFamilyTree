@@ -15,6 +15,9 @@
 		CEFC4CD52C94CF320088FC74 /* My_Family_TreeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC4CD42C94CF320088FC74 /* My_Family_TreeTests.swift */; };
 		CEFC4CDF2C94CF320088FC74 /* My_Family_TreeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC4CDE2C94CF320088FC74 /* My_Family_TreeUITests.swift */; };
 		CEFC4CE12C94CF320088FC74 /* My_Family_TreeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC4CE02C94CF320088FC74 /* My_Family_TreeUITestsLaunchTests.swift */; };
+		CEFC4CEE2C94CFAD0088FC74 /* LeafletFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC4CED2C94CFAD0088FC74 /* LeafletFile.swift */; };
+		CEFC4CF02C94D09C0088FC74 /* LeafletInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC4CEF2C94D09C0088FC74 /* LeafletInfo.swift */; };
+		CEFC4CF22C94D1880088FC74 /* LeafletPersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC4CF12C94D1880088FC74 /* LeafletPersonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		CEFC4CDA2C94CF320088FC74 /* My Family TreeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "My Family TreeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEFC4CDE2C94CF320088FC74 /* My_Family_TreeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My_Family_TreeUITests.swift; sourceTree = "<group>"; };
 		CEFC4CE02C94CF320088FC74 /* My_Family_TreeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My_Family_TreeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CEFC4CED2C94CFAD0088FC74 /* LeafletFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeafletFile.swift; sourceTree = "<group>"; };
+		CEFC4CEF2C94D09C0088FC74 /* LeafletInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeafletInfo.swift; sourceTree = "<group>"; };
+		CEFC4CF12C94D1880088FC74 /* LeafletPersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeafletPersonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +117,9 @@
 			isa = PBXGroup;
 			children = (
 				CEFC4CCA2C94CF320088FC74 /* Preview Assets.xcassets */,
+				CEFC4CED2C94CFAD0088FC74 /* LeafletFile.swift */,
+				CEFC4CEF2C94D09C0088FC74 /* LeafletInfo.swift */,
+				CEFC4CF12C94D1880088FC74 /* LeafletPersonView.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -263,6 +272,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEFC4CC32C94CF2E0088FC74 /* ContentView.swift in Sources */,
+				CEFC4CF02C94D09C0088FC74 /* LeafletInfo.swift in Sources */,
+				CEFC4CEE2C94CFAD0088FC74 /* LeafletFile.swift in Sources */,
+				CEFC4CF22C94D1880088FC74 /* LeafletPersonView.swift in Sources */,
 				CEFC4CC52C94CF2E0088FC74 /* Item.swift in Sources */,
 				CEFC4CC12C94CF2E0088FC74 /* My_Family_TreeApp.swift in Sources */,
 			);
