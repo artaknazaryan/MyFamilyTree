@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LeafletPersonView: View {
     
-    var leafletPerson: Leaflet
+    var leafletPerson: LeafletPerson
     
     @State private var showAboutBranch = false
     
@@ -52,7 +52,7 @@ struct LeafletPersonView: View {
 }
 
 #Preview {
-    LeafletInfo(leafletPerson: Leaflet(name: "Artak", surname: "Nazaryan", patronymic: "Lyova", gender: .man, dateOfBirth: DatePerson(year: 1980, month: .october, day: 23), dateOfDeath: DatePerson(), placeOfBirth: "Aramus", placeOfResidence: "Yerevan"))
+    LeafletInfo(leafletPerson: LeafletPerson(name: "Artak", surname: "Nazaryan", patronymic: "Lyova", gender: .man, dateOfBirth: DatePerson(year: 1980, month: .october, day: 23), dateOfDeath: DatePerson(), placeOfBirth: "Aramus", placeOfResidence: "Yerevan"))
 }
 
 

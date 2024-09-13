@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct Leaflet: Identifiable {
+struct LeafletPerson: Identifiable {
     var id = UUID()
     var name: String
     var surname: String
@@ -111,6 +111,6 @@ extension Month {
 }
 
 
-var leafletPerson: [Leaflet] = [
-    Leaflet(name: "Artak", surname: "Nazaryan", patronymic: "Lyova", gender: .man, dateOfBirth: DatePerson(year: 1980, month: .october, day: 23), dateOfDeath: DatePerson(), placeOfBirth: "Aramus", placeOfResidence: "Yerevan"),
+var persons: [LeafletPerson] = [
+    LeafletPerson(name: "Artak", surname: "Nazaryan", patronymic: "Lyova", gender: .man, dateOfBirth: DatePerson(year: 1980, month: .october, day: 23), dateOfDeath: DatePerson(), placeOfBirth: "Aramus", placeOfResidence: "Yerevan"),
 ]
