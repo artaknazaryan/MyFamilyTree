@@ -52,7 +52,7 @@ struct LeafletPersonView: View {
 }
 
 #Preview {
-    LeafletInfo(leafletPerson: LeafletPerson(name: "Artak", surname: "Nazaryan", patronymic: "Lyova", gender: .man, dateOfBirth: DatePerson(year: 1980, month: .october, day: 23), dateOfDeath: DatePerson(), placeOfBirth: "Aramus", placeOfResidence: "Yerevan"))
+    LeafletPersonView(leafletPerson: LeafletPerson(/*maritalStatus: .married,*/ name: "Artak", surname: "Nazaryan", patronymic: "Lyova", gender: .man, dateOfBirth: DatePerson(year: 1980, month: .october, day: 23), dateOfDeath: DatePerson(), placeOfBirth: "Aramus", placeOfResidence: "Yerevan"))
 }
 
 

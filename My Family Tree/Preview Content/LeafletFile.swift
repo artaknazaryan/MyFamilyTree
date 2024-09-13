@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 struct LeafletPerson: Identifiable {
+//    var maritalStatus: MaritalStatus
     var id = UUID()
     var name: String
     var surname: String
@@ -23,7 +24,26 @@ struct LeafletPerson: Identifiable {
 enum Gender {
     case man
     case woman
+    var genderString: String {
+        switch self {
+        case .man: return "Man"
+        case .woman: return "Woman"
+        }
+    }
 }
+
+//enum MaritalStatus {
+//    case married
+//    case notMarried
+//    case widower
+//    var genderString: String {
+//        switch self {
+//        case .married: return "Married"
+//        case .notMarried: return "Not Married"
+//        case .widower: return "Midower"
+//        }
+//    }
+//}
 
 enum Month: Int {
     case january = 1
@@ -40,39 +60,6 @@ enum Month: Int {
     case december
 }
 
-//enum Month {
-//    case january
-//    case february
-//    case march
-//    case april
-//    case may
-//    case june
-//    case july
-//    case august
-//    case september
-//    case october
-//    case november
-//    case december
-//
-//    var name: String {
-//        switch self {
-//        case .january: return "January"
-//        case .february: return "February"
-//        case .march: return "March"
-//        case .april: return "April"
-//        case .may: return "May"
-//        case .june: return "June"
-//        case .july: return "July"
-//        case .august: return "August"
-//        case .september: return "September"
-//        case .october: return "October"
-//        case .november: return "November"
-//        case .december: return "December"
-//        }
-//    }
-//}
-
-
 struct DatePerson {
     var year: Int?
     var month: Month?
@@ -81,19 +68,19 @@ struct DatePerson {
     func formattedDate() -> String {
         // Проверяем, есть ли хотя бы один компонент даты
         if year == nil && month == nil && day == nil {
-            return "неизвестно"
+            return "date of death unknown"
         }
         
         var components = [String]()
         
+        if let day = day {
+                    components.append("\(day)")
+                }
+        if let month = month {
+                    components.append(month.fullMonthName())
+                }
         if let year = year {
             components.append("\(year)")
-        }
-        if let month = month {
-            components.append(month.fullMonthName())
-        }
-        if let day = day {
-            components.append("\(day)")
         }
         
         return components.joined(separator: " ")
@@ -112,5 +99,5 @@ extension Month {
 
 
 var persons: [LeafletPerson] = [
-    LeafletPerson(name: "Artak", surname: "Nazaryan", patronymic: "Lyova", gender: .man, dateOfBirth: DatePerson(year: 1980, month: .october, day: 23), dateOfDeath: DatePerson(), placeOfBirth: "Aramus", placeOfResidence: "Yerevan"),
+    LeafletPerson(/*maritalStatus: .married,*/ name: "Artak", surname: "Nazaryan", patronymic: "Lyova", gender: .man, dateOfBirth: DatePerson(year: 1980, month: .october, day: 23), dateOfDeath: DatePerson(), placeOfBirth: "Aramus", placeOfResidence: "Yerevan"),
 ]
