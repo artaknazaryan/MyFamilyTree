@@ -25,7 +25,7 @@ struct My_Family_TreeApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TreeView()
         }
         .modelContainer(sharedModelContainer)
     }

@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE083A852C97782100DE58B5 /* TreeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE083A842C97782100DE58B5 /* TreeView.swift */; };
+		CE083A872C98B1D500DE58B5 /* AddNewLeafletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE083A862C98B1D400DE58B5 /* AddNewLeafletView.swift */; };
 		CEFC4CC12C94CF2E0088FC74 /* My_Family_TreeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC4CC02C94CF2E0088FC74 /* My_Family_TreeApp.swift */; };
-		CEFC4CC32C94CF2E0088FC74 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC4CC22C94CF2E0088FC74 /* ContentView.swift */; };
 		CEFC4CC52C94CF2E0088FC74 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC4CC42C94CF2E0088FC74 /* Item.swift */; };
 		CEFC4CC72C94CF320088FC74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEFC4CC62C94CF320088FC74 /* Assets.xcassets */; };
 		CEFC4CCB2C94CF320088FC74 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEFC4CCA2C94CF320088FC74 /* Preview Assets.xcassets */; };
@@ -16,8 +17,7 @@
 		CEFC4CDF2C94CF320088FC74 /* My_Family_TreeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC4CDE2C94CF320088FC74 /* My_Family_TreeUITests.swift */; };
 		CEFC4CE12C94CF320088FC74 /* My_Family_TreeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC4CE02C94CF320088FC74 /* My_Family_TreeUITestsLaunchTests.swift */; };
 		CEFC4CEE2C94CFAD0088FC74 /* LeafletFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC4CED2C94CFAD0088FC74 /* LeafletFile.swift */; };
-		CEFC4CF02C94D09C0088FC74 /* LeafletInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC4CEF2C94D09C0088FC74 /* LeafletInfo.swift */; };
-		CEFC4CF22C94D1880088FC74 /* LeafletPersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC4CF12C94D1880088FC74 /* LeafletPersonView.swift */; };
+		CEFC4CF22C94D1880088FC74 /* LeafletPersonInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC4CF12C94D1880088FC74 /* LeafletPersonInfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,9 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE083A842C97782100DE58B5 /* TreeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeView.swift; sourceTree = "<group>"; };
+		CE083A862C98B1D400DE58B5 /* AddNewLeafletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewLeafletView.swift; sourceTree = "<group>"; };
 		CEFC4CBD2C94CF2E0088FC74 /* My Family Tree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Family Tree.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEFC4CC02C94CF2E0088FC74 /* My_Family_TreeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My_Family_TreeApp.swift; sourceTree = "<group>"; };
-		CEFC4CC22C94CF2E0088FC74 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CEFC4CC42C94CF2E0088FC74 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		CEFC4CC62C94CF320088FC74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEFC4CC82C94CF320088FC74 /* My_Family_Tree.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = My_Family_Tree.entitlements; sourceTree = "<group>"; };
@@ -51,8 +52,7 @@
 		CEFC4CDE2C94CF320088FC74 /* My_Family_TreeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My_Family_TreeUITests.swift; sourceTree = "<group>"; };
 		CEFC4CE02C94CF320088FC74 /* My_Family_TreeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My_Family_TreeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CEFC4CED2C94CFAD0088FC74 /* LeafletFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeafletFile.swift; sourceTree = "<group>"; };
-		CEFC4CEF2C94D09C0088FC74 /* LeafletInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeafletInfo.swift; sourceTree = "<group>"; };
-		CEFC4CF12C94D1880088FC74 /* LeafletPersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeafletPersonView.swift; sourceTree = "<group>"; };
+		CEFC4CF12C94D1880088FC74 /* LeafletPersonInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeafletPersonInfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				CEFC4CC02C94CF2E0088FC74 /* My_Family_TreeApp.swift */,
-				CEFC4CC22C94CF2E0088FC74 /* ContentView.swift */,
+				CE083A842C97782100DE58B5 /* TreeView.swift */,
 				CEFC4CC42C94CF2E0088FC74 /* Item.swift */,
 				CEFC4CC62C94CF320088FC74 /* Assets.xcassets */,
 				CEFC4CC82C94CF320088FC74 /* My_Family_Tree.entitlements */,
@@ -118,8 +118,8 @@
 			children = (
 				CEFC4CCA2C94CF320088FC74 /* Preview Assets.xcassets */,
 				CEFC4CED2C94CFAD0088FC74 /* LeafletFile.swift */,
-				CEFC4CEF2C94D09C0088FC74 /* LeafletInfo.swift */,
-				CEFC4CF12C94D1880088FC74 /* LeafletPersonView.swift */,
+				CEFC4CF12C94D1880088FC74 /* LeafletPersonInfoView.swift */,
+				CE083A862C98B1D400DE58B5 /* AddNewLeafletView.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -271,12 +271,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEFC4CC32C94CF2E0088FC74 /* ContentView.swift in Sources */,
-				CEFC4CF02C94D09C0088FC74 /* LeafletInfo.swift in Sources */,
+				CE083A852C97782100DE58B5 /* TreeView.swift in Sources */,
 				CEFC4CEE2C94CFAD0088FC74 /* LeafletFile.swift in Sources */,
-				CEFC4CF22C94D1880088FC74 /* LeafletPersonView.swift in Sources */,
+				CEFC4CF22C94D1880088FC74 /* LeafletPersonInfoView.swift in Sources */,
 				CEFC4CC52C94CF2E0088FC74 /* Item.swift in Sources */,
 				CEFC4CC12C94CF2E0088FC74 /* My_Family_TreeApp.swift in Sources */,
+				CE083A872C98B1D500DE58B5 /* AddNewLeafletView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
