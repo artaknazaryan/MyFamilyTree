@@ -26,7 +26,6 @@ struct LeafletPersonInfoView: View {
                     Section(header: Text("Անձնական Տվյալներ")) {
                         VStack(alignment: .leading) {
                             HStack {
-//                                Text(leafletPerson.gender.genderString)
                                 Text(leafletPerson.surname)
                                 Text(leafletPerson.name)
                                 Text(leafletPerson.patronymic)
@@ -49,27 +48,30 @@ struct LeafletPersonInfoView: View {
                         .background(Color.white)
                         .cornerRadius(10)
                     }
-                    
-                    Section(header: Text("ԶԱՎԱԿՆԵՐԸ")) {
-                        ForEach(leafletPerson.descendants) { descendant in
-                            Text("\(descendant.name) \(descendant.surname)")
+                    if leafletPerson.gender == .man && !leafletPerson.descendants.isEmpty {
+                        Section(header: Text("ԶԱՎԱԿՆԵՐԸ")) {
+                            ForEach(leafletPerson.descendants) { descendant in
+                                NavigationLink(destination: LeafletPersonInfoView(leafletPerson: descendant)) {
+                                    Text("\(descendant.name) \(descendant.surname)")
+                                }
+                            }
                         }
                     }
-
-                    
-                    Button(action: {
-                        showAboutBranch = true
-                    }) {
-                        Text("Biography of \(leafletPerson.name)")
-                            .font(.title)
-                            .padding()
-                    }
-                    .sheet(isPresented: $showAboutBranch) {
-                        ScrollView {
-                            Text(leafletPerson.biography)
+                    if !leafletPerson.biography.isEmpty {
+                        Button(action: {
+                            showAboutBranch = true
+                        }) {
+                            Text("\(leafletPerson.name)ի կենսագրությունը")
+                                .font(.system(size: 18))
                                 .padding()
                         }
-                        Spacer()
+                        .sheet(isPresented: $showAboutBranch) {
+                            ScrollView {
+                                Text(leafletPerson.biography)
+                                    .padding()
+                            }
+                            Spacer()
+                        }
                     }
                 }
             }
@@ -77,6 +79,16 @@ struct LeafletPersonInfoView: View {
                 .navigationBarTitleDisplayMode(.inline)
                 .navigationTitle(leafletPerson.name)
         }
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button(action: {
+                    // Ваш код для действия кнопки
+                }) {
+                    Text("Edit")
+                }
+            }
+        }
+
     }
 }
 
