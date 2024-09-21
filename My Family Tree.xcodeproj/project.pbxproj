@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CE083A852C97782100DE58B5 /* TreeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE083A842C97782100DE58B5 /* TreeView.swift */; };
 		CE083A872C98B1D500DE58B5 /* AddNewLeafletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE083A862C98B1D400DE58B5 /* AddNewLeafletView.swift */; };
+		CE1B01E82C9F20590004AE75 /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01E72C9F20590004AE75 /* Example.swift */; };
 		CEFC4CC12C94CF2E0088FC74 /* My_Family_TreeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC4CC02C94CF2E0088FC74 /* My_Family_TreeApp.swift */; };
 		CEFC4CC52C94CF2E0088FC74 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC4CC42C94CF2E0088FC74 /* Item.swift */; };
 		CEFC4CC72C94CF320088FC74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEFC4CC62C94CF320088FC74 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		CE083A842C97782100DE58B5 /* TreeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeView.swift; sourceTree = "<group>"; };
 		CE083A862C98B1D400DE58B5 /* AddNewLeafletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewLeafletView.swift; sourceTree = "<group>"; };
+		CE1B01E72C9F20590004AE75 /* Example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
 		CEFC4CBD2C94CF2E0088FC74 /* My Family Tree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Family Tree.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEFC4CC02C94CF2E0088FC74 /* My_Family_TreeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My_Family_TreeApp.swift; sourceTree = "<group>"; };
 		CEFC4CC42C94CF2E0088FC74 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				CEFC4CC62C94CF320088FC74 /* Assets.xcassets */,
 				CEFC4CC82C94CF320088FC74 /* My_Family_Tree.entitlements */,
 				CEFC4CC92C94CF320088FC74 /* Preview Content */,
+				CE1B01E72C9F20590004AE75 /* Example.swift */,
 			);
 			path = "My Family Tree";
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE083A852C97782100DE58B5 /* TreeView.swift in Sources */,
+				CE1B01E82C9F20590004AE75 /* Example.swift in Sources */,
 				CEFC4CEE2C94CFAD0088FC74 /* LeafletFile.swift in Sources */,
 				CEFC4CF22C94D1880088FC74 /* LeafletPersonInfoView.swift in Sources */,
 				CEFC4CC52C94CF2E0088FC74 /* Item.swift in Sources */,

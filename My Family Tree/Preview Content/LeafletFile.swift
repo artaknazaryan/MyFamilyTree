@@ -67,7 +67,7 @@ enum Month: String, CaseIterable {
 
 extension Month {
     func fullMonthName() -> String {
-        // Месяцы в Swift Enum являются перечислениями, и они не должны напрямую взаимодействовать с DateFormatter
+        
         switch self {
         case .january: return "Հունվար"
         case .february: return "Փետրվար"
@@ -85,6 +85,24 @@ extension Month {
     }
 }
 
+extension Month {
+    func lastMonthDay(isLeapYear: Bool) -> Int {
+        switch self {
+        case .january: return 31
+        case .february: return isLeapYear ? 29 : 28
+        case .march: return 31
+        case .april: return 30
+        case .may: return 31
+        case .june: return 30
+        case .july: return 31
+        case .august: return 31
+        case .september: return 30
+        case .october: return 31
+        case .november: return 30
+        case .december: return 31
+        }
+    }
+}
 
 struct DatePerson {
     var year: Int?

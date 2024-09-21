@@ -33,13 +33,25 @@ struct TreeView: View {
                         descendants: person.descendants
                     ))
                 } label: {
+                    ZStack {
+                        Image(systemName: "leaf.fill")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 300, height: 90)
+                            .foregroundColor(.green)
                         VStack {
                             Text(person.name)
+                                .font(.headline)
+                                .foregroundColor(.black)
                             Text(person.surname)
+                                .font(.subheadline)
+                                .foregroundColor(.black)
                         }
-                    .padding(5)
-                    .background(Color.green)
-                    .cornerRadius(10)
+                        .padding(5)
+                        .background(Color.clear)
+                        .cornerRadius(10)
+                    }
+
                 }
             }
             .padding()
