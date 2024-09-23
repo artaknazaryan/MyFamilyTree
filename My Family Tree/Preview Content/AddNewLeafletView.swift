@@ -138,6 +138,7 @@ struct AddNewLeafletView: View {
     @State private var selectedMonth: Month = .january
     @State private var selectedGender: Gender = .man
     @State private var selectedDay: Int = 1
+    @State private var isImagePickerPresented = false
     
     @State private var selectedYear = Calendar.current.component(.year, from: Date())
     @State private var years: [Int] = Array((1880...Calendar.current.component(.year, from: Date())).reversed())
@@ -152,6 +153,14 @@ struct AddNewLeafletView: View {
                     .padding()
                     .background(Color(uiColor: .secondarySystemBackground))
                     .cornerRadius(10)
+                Button(action: {
+                    isImagePickerPresented = true
+                }, label: {
+                    Text("Add Foto")
+                })
+                .sheet(isPresented: $isImagePickerPresented) {
+//                    ImagePicker(selectedImage: $leafletPerson.personImage)
+                }
                 
                 VStack(alignment: .leading) {
                     TextField("Անուն", text: $name)
