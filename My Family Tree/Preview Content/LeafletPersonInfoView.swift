@@ -18,6 +18,7 @@ struct LeafletPersonInfoView: View {
     @State private var showAboutBranch = false
     @State private var isImagePickerPresented = false
     @State private var showActionSheet = false
+    @State private var showEditLeaflet = false
     
     var body: some View {
         NavigationStack {
@@ -46,32 +47,32 @@ struct LeafletPersonInfoView: View {
                             }
                         }
                     
-                    Button(action: {
-                        showActionSheet = true // Открыть ActionSheet
-                    }, label: {
-                        leafletPerson.personImage == nil ? Text("Add Photo") : Text("Change Photo")
-                    })
-                    .actionSheet(isPresented: $showActionSheet) {
-                        leafletPerson.personImage != nil ?
-                        ActionSheet(title: Text("Choose an action"), buttons: [
-                            .default(Text("Change Photo")) {
-                                isImagePickerPresented = true // Открыть галерею
-                            },
-                            .destructive(Text("Delete Photo")) {
-                                leafletPerson.personImage = nil // Удалить фото
-                            },
-                            .cancel()
-                        ]) :
-                        ActionSheet(title: Text("Add a photo"), buttons: [
-                            .default(Text("Add Photo")) {
-                                isImagePickerPresented = true // Открыть галерею
-                            },
-                            .cancel()
-                        ])
-                    }
-                    .sheet(isPresented: $isImagePickerPresented) {
-                        ImagePicker(selectedImage: $leafletPerson.personImage)
-                    }
+//                    Button(action: {
+//                        showActionSheet = true // Открыть ActionSheet
+//                    }, label: {
+//                        leafletPerson.personImage == nil ? Text("Add Photo") : Text("Change Photo")
+//                    })
+//                    .actionSheet(isPresented: $showActionSheet) {
+//                        leafletPerson.personImage != nil ?
+//                        ActionSheet(title: Text("Ընտրել"), buttons: [
+//                            .default(Text("Փոխել նկարը")) {
+//                                isImagePickerPresented = true // Открыть галерею
+//                            },
+//                            .destructive(Text("Ջնջել նկարը")) {
+//                                leafletPerson.personImage = nil // Удалить фото
+//                            },
+//                            .cancel()
+//                        ]) :
+//                        ActionSheet(title: Text("Ավելացնել նկար"), buttons: [
+//                            .default(Text("Ավելացնել նկար")) {
+//                                isImagePickerPresented = true // Открыть галерею
+//                            },
+//                            .cancel()
+//                        ])
+//                    }
+//                    .sheet(isPresented: $isImagePickerPresented) {
+//                        ImagePicker(selectedImage: $leafletPerson.personImage)
+//                    }
 
                     List {
                         Section(header: Text("Անձնական Տվյալներ")) {
@@ -85,7 +86,7 @@ struct LeafletPersonInfoView: View {
                                 Divider()
                                 HStack {
                                     Text("\(leafletPerson.dateOfBirth?.formattedDate() ?? "Անհայտ") թ.")
-                                    if leafletPerson.isDied {
+                                    if leafletPerson.isAlive == .isDied {
                                         Divider()
                                             .frame(height: 20)
                                         Text(leafletPerson.dateOfDeath?.formattedDate() ?? "Անհայտ")
@@ -147,12 +148,15 @@ struct LeafletPersonInfoView: View {
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: {
-                    // Ваш код для действия кнопки
+                    showEditLeaflet.toggle()
                 }) {
                     Text("Edit")
                 }
             }
         }
+        .sheet(isPresented: $showEditLeaflet) {
+                    EditLeafletPersonView(leafletPerson: $leafletPerson) // Передаем данные для редактирования
+                }
     }
 }
 
@@ -192,7 +196,28 @@ struct ImagePicker: UIViewControllerRepresentable {
     func updateUIViewController(_ uiViewController: UIImagePickerController, context: Context) {}
 }
 
+//extension LeafletPersonInfoView {
+//    final class LeafletPersonInfoViewModel: ObservableObject {
+//        @Published fileprivate var leafletPerson = persons[0]
+//    }
+//}
+
+//class LeafletPersonViewModel: ObservableObject {
+//    @Published var leafletPerson = persons[0] // Предполагается, что LeafletPerson - ваша модель
+//    
+//    init(leafletPerson: LeafletPerson) {
+//        self.leafletPerson = leafletPerson
+//    }
+//    
+//    func updateImage(_ image: UIImage?) {
+//        leafletPerson.personImage = image
+//    }
+//    
+//    func deleteImage() {
+//        leafletPerson.personImage = nil
+//    }
+//}
 
 #Preview {
-    LeafletPersonInfoView()
+    LeafletPersonInfoView(leafletPerson: persons[0])
 }

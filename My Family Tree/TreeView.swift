@@ -29,7 +29,7 @@ struct TreeView: View {
                         placeOfBirth: person.placeOfBirth,
                         placeOfResidence: person.placeOfResidence,
                         biography: person.biography,
-                        isDied: person.isDied, 
+                        isAlive: person.isAlive, 
                         descendants: person.descendants
                     ))
                 } label: {
