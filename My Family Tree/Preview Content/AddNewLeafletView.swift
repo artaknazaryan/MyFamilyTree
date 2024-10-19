@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct AddNewLeafletView: View {
+    var onAdd: (LeafletPerson) -> Void
+    
+    @Environment(\.dismiss) var dismiss
     
     @Environment(\.presentationMode) var presentationMode
     
@@ -22,6 +25,7 @@ struct AddNewLeafletView: View {
     @State private var selectedIsAlive: IsAlive = .isAlive
     @State private var selectedDay: Int = 1
     @State private var isImagePickerPresented = false
+    @State private var maritalStatus: MaritalStatus = .notMarried
     
     @State private var selectedYear = Calendar.current.component(.year, from: Date())
     @State private var years: [Int] = Array((1880...Calendar.current.component(.year, from: Date())).reversed())
@@ -47,19 +51,14 @@ struct AddNewLeafletView: View {
                 
                 VStack(alignment: .leading) {
                     TextField("Անուն", text: $name)
-                        .background(Color.white)
                     Divider()
                     TextField("Ազգանուն", text: $surname)
-                        .background(Color.white)
                     Divider()
                     TextField("Հայրանուն", text: $patronymic)
-                        .background(Color.white)
                     Divider()
                     TextField("Ծննդավայրը", text: $placeOfBirth)
-                        .background(Color.white)
                     Divider()
                     TextField("Բնակության վայրը", text: $placeOfResidence)
-                        .background(Color.white)
                     Divider()
                     
                     HStack {
@@ -124,12 +123,29 @@ struct AddNewLeafletView: View {
             .navigationBarTitle("Նոր տերև", displayMode: .inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    Button("Cancel") {
+                    Button("Վերադառնալ") {
                         presentationMode.wrappedValue.dismiss()
                     }
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("Save") {
+                    Button("Պահպանել") {
+                        let newDescendant = LeafletPerson(
+                            maritalStatus: maritalStatus,
+                            personImage: nil,
+                            name: name,
+                            surname: surname,
+                            patronymic: "",
+                            gender: .man,
+                            dateOfBirth: DatePerson(year: selectedYear, month: selectedMonth, day: selectedDay),
+                            dateOfDeath: nil,
+                            placeOfBirth: "",
+                            biography: "",
+                            isAlive: .isAlive,
+                            descendants: []
+                        )
+                        
+                        onAdd(newDescendant)
+                        dismiss()
                         saveLeaflet()
                         presentationMode.wrappedValue.dismiss()
                     }
@@ -163,8 +179,8 @@ struct AddNewLeafletView: View {
     }
 }
 
-struct AddNewLeafletView_Previews: PreviewProvider {
-    static var previews: some View {
-        AddNewLeafletView()
-    }
-}
+//struct AddNewLeafletView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        AddNewLeafletView()
+//    }
+//}

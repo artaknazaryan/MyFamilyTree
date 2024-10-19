@@ -10,6 +10,7 @@
 		CE083A852C97782100DE58B5 /* TreeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE083A842C97782100DE58B5 /* TreeView.swift */; };
 		CE083A872C98B1D500DE58B5 /* AddNewLeafletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE083A862C98B1D400DE58B5 /* AddNewLeafletView.swift */; };
 		CE1B01E82C9F20590004AE75 /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01E72C9F20590004AE75 /* Example.swift */; };
+		CE3798142CBAFEC000C8C984 /* FamilyBook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE3798122CBAFEC000C8C984 /* FamilyBook.xcdatamodeld */; };
 		CEFBADFC2CA733C9004A84E0 /* EditLeafletPersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFBADFB2CA733C9004A84E0 /* EditLeafletPersonView.swift */; };
 		CEFBADFE2CA93073004A84E0 /* TapBiographyText.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFBADFD2CA93073004A84E0 /* TapBiographyText.swift */; };
 		CEFC4CC12C94CF2E0088FC74 /* My_Family_TreeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC4CC02C94CF2E0088FC74 /* My_Family_TreeApp.swift */; };
@@ -44,6 +45,7 @@
 		CE083A842C97782100DE58B5 /* TreeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeView.swift; sourceTree = "<group>"; };
 		CE083A862C98B1D400DE58B5 /* AddNewLeafletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewLeafletView.swift; sourceTree = "<group>"; };
 		CE1B01E72C9F20590004AE75 /* Example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
+		CE3798132CBAFEC000C8C984 /* FamilyBook.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FamilyBook.xcdatamodel; sourceTree = "<group>"; };
 		CEFBADFB2CA733C9004A84E0 /* EditLeafletPersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditLeafletPersonView.swift; sourceTree = "<group>"; };
 		CEFBADFD2CA93073004A84E0 /* TapBiographyText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapBiographyText.swift; sourceTree = "<group>"; };
 		CEFC4CBD2C94CF2E0088FC74 /* My Family Tree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Family Tree.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,6 +118,7 @@
 				CEFC4CC82C94CF320088FC74 /* My_Family_Tree.entitlements */,
 				CEFC4CC92C94CF320088FC74 /* Preview Content */,
 				CE1B01E72C9F20590004AE75 /* Example.swift */,
+				CE3798122CBAFEC000C8C984 /* FamilyBook.xcdatamodeld */,
 			);
 			path = "My Family Tree";
 			sourceTree = "<group>";
@@ -238,6 +241,8 @@
 				Base,
 			);
 			mainGroup = CEFC4CB42C94CF2E0088FC74;
+			packageReferences = (
+			);
 			productRefGroup = CEFC4CBE2C94CF2E0088FC74 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -286,6 +291,7 @@
 				CEFBADFC2CA733C9004A84E0 /* EditLeafletPersonView.swift in Sources */,
 				CEFC4CF22C94D1880088FC74 /* LeafletPersonInfoView.swift in Sources */,
 				CEFC4CC52C94CF2E0088FC74 /* Item.swift in Sources */,
+				CE3798142CBAFEC000C8C984 /* FamilyBook.xcdatamodeld in Sources */,
 				CEFBADFE2CA93073004A84E0 /* TapBiographyText.swift in Sources */,
 				CEFC4CC12C94CF2E0088FC74 /* My_Family_TreeApp.swift in Sources */,
 				CE083A872C98B1D500DE58B5 /* AddNewLeafletView.swift in Sources */,
@@ -645,6 +651,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CE3798122CBAFEC000C8C984 /* FamilyBook.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CE3798132CBAFEC000C8C984 /* FamilyBook.xcdatamodel */,
+			);
+			currentVersion = CE3798132CBAFEC000C8C984 /* FamilyBook.xcdatamodel */;
+			path = FamilyBook.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CEFC4CB52C94CF2E0088FC74 /* Project object */;
 }
